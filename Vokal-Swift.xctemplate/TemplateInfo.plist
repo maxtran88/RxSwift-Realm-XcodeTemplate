@@ -78,16 +78,6 @@
 					<key>Class</key>
 					<string>ShellScript</string>
 					<key>Name</key>
-					<string>Swift Warning Run Script</string>
-					<key>ShellPath</key>
-					<string>/bin/bash</string>
-					<key>ShellScript</key>
-					<string>&quot;${SRCROOT}/___PACKAGENAME___/Scripts/Swift_Warning_Run_Script.sh&quot;</string>
-				</dict>
-				<dict>
-					<key>Class</key>
-					<string>ShellScript</string>
-					<key>Name</key>
 					<string>SwiftLint Run Script</string>
 					<key>ShellPath</key>
 					<string>/bin/bash</string>
@@ -112,7 +102,6 @@
 		<string>CustomCell/BaseTableViewCell.swift</string>
 		<string>Category/BaseTableViewHeaderFooterView.swift</string>
 		<string>../Podfile:swiftbasics</string>
-		<string>Scripts/Swift_Warning_Run_Script.sh</string>
 		<string>Scripts/R.swift.sh</string>
 	</array>
 	<key>Definitions</key>
@@ -171,7 +160,7 @@
 			<string>BaseImageView.swift</string>
 			<key>Group</key>
 			<array>
-				<string>ViewControlelr</string>
+				<string>Model</string>
 			</array>
 		</dict>
 		<key>Manager/BaseTextView.swift</key>
@@ -222,13 +211,6 @@
 		<dict>
 			<key>Path</key>
 			<string>Scripts/R.swift.sh</string>
-			<key>Group</key>
-			<string>Scripts</string>
-		</dict>
-		<key>Scripts/Swift_Warning_Run_Script.sh</key>
-		<dict>
-			<key>Path</key>
-			<string>Scripts/Swift_Warning_Run_Script.sh</string>
 			<key>Group</key>
 			<string>Scripts</string>
 		</dict>
