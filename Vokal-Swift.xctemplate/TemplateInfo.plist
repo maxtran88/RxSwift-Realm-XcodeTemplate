@@ -91,16 +91,18 @@
 	<array>
 		<string>../R.generated.swift</string>
 		<string>AppDelegate.swift</string>
-		<string>TestingAppDelegate.swift</string>
-		<string>ViewController/ViewController.swift</string>
-		<string>View/BaseControl.swift</string>
-		<string>CustomView/BaseButton.swift</string>
-		<string>ViewModel/BaseTextField.swift</string>
-		<string>Request/BaseView.swift</string>
-		<string>Model/BaseImageView.swift</string>
-		<string>Manager/BaseTextView.swift</string>
+		<string>CustomView/BaseView.swift</string>
 		<string>CustomCell/BaseTableViewCell.swift</string>
-		<string>Category/BaseTableViewHeaderFooterView.swift</string>
+		<string>CustomCell/BaseCollectionViewCell.swift</string>
+		<string>Category</string>
+		<string>Request/BaseRequest.swift</string>
+		<string>Manager/RealmManager.swift</string>
+		<string>Model/BaseObject.swift</string>
+		<string>ViewModel/BaseViewModel.swift</string>
+		<string>ViewModel/RxMediaPickerViewModel.swift</string>
+		<string>ViewController/ViewController.swift</string>
+		<string>ViewController/BaseViewController.swift</string>
+		<string>View</string>
 		<string>../Podfile:swiftbasics</string>
 		<string>Scripts/R.swift.sh</string>
 	</array>
@@ -118,55 +120,69 @@
 			<key>Group</key>
 			<string>ViewController</string>
 		</dict>
-		<key>View/BaseControl.swift</key>
+        <key>ViewController/BaseViewController.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>BaseViewController.swift</string>
+            <key>Group</key>
+            <string>ViewController</string>
+        </dict>
+		<key>View</key>
 		<dict>
-			<key>Path</key>
-			<string>BaseControl.swift</string>
 			<key>Group</key>
 			<array>
 				<string>View</string>
 			</array>
 		</dict>
-		<key>CustomView/BaseButton.swift</key>
-		<dict>
-			<key>Path</key>
-			<string>BaseButton.swift</string>
-			<key>Group</key>
-			<array>
-				<string>CustomView</string>
-			</array>
-		</dict>
-		<key>ViewModel/BaseTextField.swift</key>
-		<dict>
-			<key>Path</key>
-			<string>BaseTextField.swift</string>
-			<key>Group</key>
-			<array>
-				<string>ViewModel</string>
-			</array>
-		</dict>
-		<key>Request/BaseView.swift</key>
+		<key>CustomView/BaseView.swift</key>
 		<dict>
 			<key>Path</key>
 			<string>BaseView.swift</string>
 			<key>Group</key>
 			<array>
+				<string>CustomView</string>
+			</array>
+		</dict>
+		<key>ViewModel/BaseViewModel.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>BaseViewModel.swift</string>
+			<key>Group</key>
+			<array>
+				<string>ViewModel</string>
+			</array>
+		</dict>
+		<key>ViewModel/RxMediaPickerViewModel.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>RxMediaPickerViewModel.swift</string>
+			<key>Group</key>
+			<array>
+				<string>ViewModel</string>
+			</array>
+		</dict>
+		<key>Request/BaseRequest.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>BaseRequest.swift</string>
+			<key>Group</key>
+			<array>
 				<string>Request</string>
 			</array>
 		</dict>
-		<key>Model/BaseImageView.swift</key>
+		<key>Model/BaseObject.swift</key>
 		<dict>
 			<key>Path</key>
-			<string>BaseImageView.swift</string>
+			<string>BaseObject.swift</string>
 			<key>Group</key>
 			<array>
 				<string>Model</string>
 			</array>
 		</dict>
-		<key>Manager/BaseTextView.swift</key>
+		<key>Manager/RealmManager.swift</key>
 		<dict>
 			<key>Path</key>
-			<string>BaseTextView.swift</string>
+			<string>RealmManager.swift</string>
 			<key>Group</key>
 			<array>
 				<string>Manager</string>
@@ -181,10 +197,17 @@
 				<string>CustomCell</string>
 			</array>
 		</dict>
-		<key>Category/BaseTableViewHeaderFooterView.swift</key>
+		<key>CustomCell/BaseCollectionViewCell.swift</key>
 		<dict>
 			<key>Path</key>
-			<string>BaseTableViewHeaderFooterView.swift</string>
+			<string>BaseCollectionViewCell.swift</string>
+			<key>Group</key>
+			<array>
+				<string>CustomCell</string>
+			</array>
+		</dict>
+		<key>Category</key>
+		<dict>
 			<key>Group</key>
 			<array>
 				<string>Category</string>
@@ -201,11 +224,6 @@
 			<string>Supporting Files</string>
 			<key>Path</key>
 			<string>../R.generated.swift</string>
-		</dict>
-		<key>TestingAppDelegate.swift</key>
-		<dict>
-			<key>Path</key>
-			<string>TestingAppDelegate.swift</string>
 		</dict>
 		<key>Scripts/R.swift.sh</key>
 		<dict>

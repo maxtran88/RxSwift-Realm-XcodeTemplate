@@ -7,7 +7,8 @@
 //
 
 import UIKit
+import RxSwift
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
 }

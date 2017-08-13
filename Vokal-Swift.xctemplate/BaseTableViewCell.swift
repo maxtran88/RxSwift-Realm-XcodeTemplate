@@ -7,50 +7,37 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-/**
- * Base class for table view cells. Extend this for any custom cell classes, and
- * override commonInit() to perform cell setup there.
- * Make sure to call super.commonInit() in your implementation!
- */
-class BaseTableViewCell: UITableViewCell, CommonInitializedView {
-
-    var oneTimeThingsAreSetUp = false
-
-    // MARK: - Setup functions which should be overridden
-
-    func commonInit() {
-        self.setupOneTimeThingsIfNeeded()
-        // We almost never want the gray selection style. When other styles should be used, set the
-        // style from code in the cell subclass.
-        self.selectionStyle = .none
+class BaseTableViewCell: UITableViewCell {
+    
+    lazy var disposeBag = DisposeBag()
+    
+    let onPrepareForReuse: Observable<Void> = PublishSubject()
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
     }
-
-    func setupOneTimeThings() {
-        self.oneTimeThingsAreSetUp = true
-    }
-
-    // MARK: - Initialization
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.commonInit()
-    }
-
-    // MARK: - Interface Builder
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.commonInit()
+
     }
 
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        self.commonInit()
-    }
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
 
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        (self.onPrepareForReuse as? PublishSubject<Void>)?.on(.next())
+    }
 }
