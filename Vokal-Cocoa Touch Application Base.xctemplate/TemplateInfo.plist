@@ -44,6 +44,23 @@ platform :ios, &apos;9.0&apos;
 PROJECT_NAME    = &apos;___PACKAGENAME___&apos;
 
 target PROJECT_NAME do
+
+    pod &apos;RxSwift&apos;
+    pod &apos;RxRealm&apos;
+    
+    pod &apos;RxAlamofire&apos;
+    pod &apos;RxDataSources&apos;, &apos;~> 1.0&apos;
+    pod &apos;RxRealmDataSources&apos;
+    pod &apos;RxOptional&apos;
+    pod &apos;RxMediaPicker&apos;
+    pod &apos;RxKeyboard&apos;
+    pod &apos;RxSwiftExt&apos;
+    
+    pod &apos;SDWebImage&apos;, &apos;~> 4.0&apos;
+    pod &apos;ObjectMapper&apos;, &apos;~> 2.2&apos;
+    pod &apos;SwiftyJSON&apos;
+    pod &apos;R.swift&apos;
+    
             </string>
             <key>End</key>
             <string>end

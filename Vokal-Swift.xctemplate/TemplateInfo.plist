@@ -107,7 +107,7 @@
 	<key>Definitions</key>
 	<dict>
 		<key>../Podfile:swiftbasics</key>
-		<string>    use_frameworks!
+		<string>
 
     pod &apos;R.swift&apos;, &apos;~&gt; 3.1&apos;
     pod &apos;SwiftLint&apos;</string>
@@ -236,11 +236,11 @@
 	<array>
 		<dict>
 			<key>Identifier</key>
-			<string>AlamofireEnabled</string>
+			<string>SVProgressHUD</string>
 			<key>Name</key>
-			<string>Include Alamofire</string>
+			<string>Include SVProgressHUD</string>
 			<key>Description</key>
-			<string>Adds Alamofire as a CocoaPod</string>
+			<string>Adds SVProgressHUD as a CocoaPod</string>
 			<key>Type</key>
 			<string>checkbox</string>
 			<key>Default</key>
@@ -253,26 +253,23 @@
 				<dict>
 					<key>Definitions</key>
 					<dict>
-						<key>../Podfile:afpod</key>
-						<string>    pod &apos;Alamofire&apos;, &apos;~&gt; 4.0&apos;</string>
-						<key>../Podfile:ilghttp</key>
-						<string>    pod &apos;ILGHttpConstants&apos;, &apos;~&gt; 2.0&apos;</string>
+						<key>../Podfile:svppod</key>
+						<string>    pod &apos;SVProgressHUD&apos;</string>
 					</dict>
 					<key>Nodes</key>
 					<array>
-						<string>../Podfile:afpod</string>
-						<string>../Podfile:ilghttp</string>
+						<string>../Podfile:svppod</string>
 					</array>
 				</dict>
 			</dict>
 		</dict>
 		<dict>
 			<key>Identifier</key>
-			<string>SwiftKeychainEnabled</string>
+			<string>DZNEmptyDataSet</string>
 			<key>Name</key>
-			<string>Include SwiftKeychainWrapper User Creds</string>
+			<string>Include DZNEmptyDataSet</string>
 			<key>Description</key>
-			<string>Adds SwiftKeychainWrapper as a CocoaPod</string>
+			<string>Adds DZNEmptyDataSet as a CocoaPod</string>
 			<key>Type</key>
 			<string>checkbox</string>
 			<key>Default</key>
@@ -285,30 +282,23 @@
 				<dict>
 					<key>Definitions</key>
 					<dict>
-						<key>../Podfile:swiftkeychainwrapper</key>
-						<string>    pod &apos;SwiftKeychainWrapper&apos;, &apos;~&gt; 3.0&apos;</string>
+						<key>../Podfile:dznpod</key>
+						<string>    pod &apos;DZNEmptyDataSet&apos;</string>
 					</dict>
 					<key>Nodes</key>
 					<array>
-						<string>../Podfile:swiftkeychainwrapper</string>
+						<string>../Podfile:dznpod</string>
 					</array>
 				</dict>
 			</dict>
 		</dict>
 		<dict>
 			<key>Identifier</key>
-			<string>BasicUserAuthentication</string>
-			<key>RequiredOptions</key>
-			<dict>
-				<key>AlamofireEnabled</key>
-				<string>true</string>
-				<key>SwiftKeychainEnabled</key>
-				<string>true</string>
-			</dict>
+			<string>SwiftyUserDefaults</string>
 			<key>Name</key>
-			<string>Include starter network utility (requires AF + SKW)</string>
+			<string>Include SwiftyUserDefaults</string>
 			<key>Description</key>
-			<string>Adds API Utility and associated classes</string>
+			<string>Adds SwiftyUserDefaults as a CocoaPod</string>
 			<key>Type</key>
 			<string>checkbox</string>
 			<key>Default</key>
@@ -321,130 +311,23 @@
 				<dict>
 					<key>Definitions</key>
 					<dict>
-						<key>Info.plist:ProdServer</key>
-						<string>&lt;key&gt;USE_PRODUCTION_SERVER&lt;/key&gt;
-&lt;string&gt;${USE_PRODUCTION_SERVER}&lt;/string&gt;</string>
-						<key>Network/MainAPIUtility.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>MainAPIUtility.swift</string>
-							<key>Group</key>
-							<string>Network</string>
-						</dict>
-						<key>Network/ServerEnvironment.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>ServerEnvironment.swift</string>
-							<key>Group</key>
-							<string>Network</string>
-						</dict>
-						<key>Network/ResetPasswordAPI.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>ResetPasswordAPI.swift</string>
-							<key>Group</key>
-							<string>Network</string>
-						</dict>
-						<key>Network/UserAPI.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>UserAPI.swift</string>
-							<key>Group</key>
-							<string>Network</string>
-						</dict>
-						<key>Network/HTTPSessionManager.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>HTTPSessionManager.swift</string>
-							<key>Group</key>
-							<string>Network</string>
-						</dict>
-						<key>Network/NetworkError.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>NetworkError.swift</string>
-							<key>Group</key>
-							<string>Network</string>
-						</dict>
-						<key>Network/TokenStorageHelper.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>TokenStorageHelper.swift</string>
-							<key>Group</key>
-							<string>Network</string>
-						</dict>
-						<key>MoveToNonUITestTarget/VOKMockData</key>
-						<dict>
-							<key>Path</key>
-							<string>VOKMockData</string>
-							<key>Group</key>
-							<string>MoveToNonUITestTarget</string>
-						</dict>
-						<key>MoveToNonUITestTarget/HTTPSessionManager+MockData.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>HTTPSessionManager+MockData.swift</string>
-							<key>Group</key>
-							<string>MoveToNonUITestTarget</string>
-						</dict>
-						<key>MoveToNonUITestTarget/APICompletionTests.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>APICompletionTests.swift</string>
-							<key>Group</key>
-							<string>MoveToNonUITestTarget</string>
-						</dict>
-						<key>MoveToNonUITestTarget/UserAPITests.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>UserAPITests.swift</string>
-							<key>Group</key>
-							<string>MoveToNonUITestTarget</string>
-						</dict>
-						<key>MoveToNonUITestTarget/TokenStorageHelperTests.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>TokenStorageHelperTests.swift</string>
-							<key>Group</key>
-							<string>MoveToNonUITestTarget</string>
-						</dict>
+						<key>../Podfile:sudpod</key>
+						<string>    pod &apos;SwiftyUserDefaults&apos;</string>
 					</dict>
 					<key>Nodes</key>
 					<array>
-						<string>Info.plist:ProdServer</string>
-						<string>Network/HTTPSessionManager.swift</string>
-						<string>Network/MainAPIUtility.swift</string>
-						<string>Network/NetworkError.swift</string>
-						<string>Network/ResetPasswordAPI.swift</string>
-						<string>Network/ServerEnvironment.swift</string>
-						<string>Network/TokenStorageHelper.swift</string>
-						<string>Network/UserAPI.swift</string>
-						<string>MoveToNonUITestTarget/HTTPSessionManager+MockData.swift</string>
-						<string>MoveToNonUITestTarget/TokenStorageHelperTests.swift</string>
-						<string>MoveToNonUITestTarget/UserAPITests.swift</string>
-						<string>MoveToNonUITestTarget/APICompletionTests.swift</string>
-						<string>MoveToNonUITestTarget/VOKMockData</string>
-					</array>
-					<key>Targets</key>
-					<array>
-						<dict>
-							<key>SharedSettings</key>
-							<dict>
-								<key>USE_PRODUCTION_SERVER</key>
-								<string>NO</string>
-							</dict>
-						</dict>
+						<string>../Podfile:sudpod</string>
 					</array>
 				</dict>
 			</dict>
 		</dict>
 		<dict>
 			<key>Identifier</key>
-			<string>VokoderEnabled</string>
+			<string>SwiftDate</string>
 			<key>Name</key>
-			<string>Include Vokoder + Core Data</string>
+			<string>Include SwiftDate</string>
 			<key>Description</key>
-			<string>Adds Vokoder as a CocoaPod and the MOGenerator script</string>
+			<string>Adds SwiftDate as a CocoaPod</string>
 			<key>Type</key>
 			<string>checkbox</string>
 			<key>Default</key>
@@ -457,39 +340,12 @@
 				<dict>
 					<key>Definitions</key>
 					<dict>
-						<key>CoreDataAndModels/___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</key>
-						<dict>
-							<key>Path</key>
-							<string>___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</string>
-							<key>Group</key>
-							<string>CoreDataAndModels</string>
-						</dict>
-						<key>CoreDataAndModels/CoreDataUtility.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>CoreDataUtility.swift</string>
-							<key>Group</key>
-							<string>CoreDataAndModels</string>
-						</dict>
-						<key>../Podfile:vokoderpod</key>
-						<string>    pod &apos;Vokoder/Swift&apos;, &apos;~&gt; 4.0.1&apos;</string>
-						<key>Scripts/MOGenerator.sh</key>
-						<dict>
-							<key>TargetIndices</key>
-							<array/>
-							<key>Path</key>
-							<string>Scripts/MOGenerator.sh</string>
-							<key>Group</key>
-							<string>Scripts</string>
-						</dict>
+						<key>../Podfile:sdatepod</key>
+						<string>    pod &apos;SwiftDate&apos;</string>
 					</dict>
 					<key>Nodes</key>
 					<array>
-						<string>CoreDataAndModels/___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</string>
-						<string>CoreDataAndModels/CoreDataUtility.swift</string>
-						<string>CoreDataAndModels</string>
-						<string>../Podfile:vokoderpod</string>
-						<string>Scripts/MOGenerator.sh</string>
+						<string>../Podfile:sdatepod</string>
 					</array>
 				</dict>
 			</dict>
