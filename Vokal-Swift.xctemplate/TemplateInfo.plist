@@ -116,7 +116,7 @@
 			<key>Path</key>
 			<string>ViewController.swift</string>
 			<key>Group</key>
-			<string>View Controllers</string>
+			<string>ViewController</string>
 		</dict>
 		<key>View/BaseControl.swift</key>
 		<dict>
