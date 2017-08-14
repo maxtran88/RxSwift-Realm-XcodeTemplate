@@ -54,6 +54,7 @@ target PROJECT_NAME do
     pod &apos;RxOptional&apos;
     pod &apos;RxMediaPicker&apos;
     pod &apos;RxKeyboard&apos;
+    pod &apos;RxGesture&apos;
     pod &apos;RxSwiftExt&apos;
     
     pod &apos;Alamofire&apos;

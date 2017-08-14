@@ -35,7 +35,6 @@ class BaseRxRequest {
     
     static func headers() -> HTTPHeaders {
         let appVersion: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
-        let myIDFA = ASIdentifierManager().advertisingIdentifier
         
         let headers: HTTPHeaders = [
             "app-version": appVersion,
@@ -56,7 +55,6 @@ class BaseRxRequest {
                                         encoding: JSONEncoding.default,
                                         headers: headers).subscribe(onNext: { (httpRes: HTTPURLResponse, jsonData: Any) in
                                             
-                                            let statusCode = httpRes.statusCode
                                             //Save Realm
                                             let json: JSON = JSON(jsonData)
                                             mappingAndSaveRealm(json: json)

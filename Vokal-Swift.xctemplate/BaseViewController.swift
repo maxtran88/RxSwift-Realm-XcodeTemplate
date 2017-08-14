@@ -28,7 +28,6 @@ class BaseViewController: UIViewController {
     
     let rx_tapGesture: Observable<Void> = PublishSubject()
     
-    private let obliqueHeaderView: ObliqueHeaderView = ObliqueHeaderView()
     private let titleImageView = UIImageView()
     private let navigationBackgroundView = UIView()
     
@@ -43,7 +42,6 @@ class BaseViewController: UIViewController {
     public func setOblique(scrollView: UIScrollView, image: UIImage?, descroption: String) {
         headerType = .oblique
         titleImageView.image = image
-        obliqueHeaderView.setDescription(descroption)
         configureSyncScrollView(scrollView)
     }
     
@@ -63,7 +61,6 @@ class BaseViewController: UIViewController {
         }
         
         self.navigationController?.navigationBar.tintColor = UIColor(white: 0.9, alpha: 1.0)
-        self.navigationController?.navigationBar.barTintColor = UIColor.darkJungleGreen()
         self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName: UIColor.white ]
         
         titleImageView.frame.size = CGSize(width: 87, height: 15)
@@ -74,12 +71,8 @@ class BaseViewController: UIViewController {
         navigationBackgroundView.frame = self.navigationController?.navigationBar.frame ?? CGRect.zero
         navigationBackgroundView.isHidden = true
         
-        obliqueHeaderView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: view.frame.width, height: 240))
-        obliqueHeaderView.isHidden = true
-        
         view.addSubview(navigationBackgroundView)
         view.addSubview(titleImageView)
-        view.insertSubview(obliqueHeaderView, at: 0)
         
         //viewTap
         view.rx.tapGesture(numberOfTouchesRequired: 1, numberOfTapsRequired: 1) { (tap: UITapGestureRecognizer) in
@@ -138,14 +131,12 @@ class BaseViewController: UIViewController {
             navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             navigationController?.navigationBar.shadowImage = UIImage()
             titleImageView.isHidden = false
-            obliqueHeaderView.isHidden = false
             navigationBackgroundView.isHidden = false
         } else {
             
             navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
             navigationController?.navigationBar.shadowImage = nil
             titleImageView.isHidden = true
-            obliqueHeaderView.isHidden = true
             navigationBackgroundView.isHidden = true
         }
     }
@@ -161,9 +152,6 @@ class BaseViewController: UIViewController {
             
             let titleImagePositionY = max(71 - 38 * moveRatio, 33)
             self.titleImageView.frame.origin.y = titleImagePositionY
-            
-            let headerHeight = max(240 - 60 * moveRatio, 180)
-            self.obliqueHeaderView.frame.size.height = headerHeight
             
         }.disposed(by: disposeBag)
     }
