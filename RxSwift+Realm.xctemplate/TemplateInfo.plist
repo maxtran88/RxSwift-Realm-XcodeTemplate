@@ -84,7 +84,6 @@
 		<string>CustomView/BaseView.swift</string>
 		<string>CustomCell/BaseTableViewCell.swift</string>
 		<string>CustomCell/BaseCollectionViewCell.swift</string>
-		<string>Category</string>
 		<string>Request/BaseRequest.swift</string>
 		<string>Manager/RealmManager.swift</string>
 		<string>Model/BaseObject.swift</string>
@@ -92,7 +91,6 @@
 		<string>ViewModel/RxMediaPickerViewModel.swift</string>
 		<string>ViewController/ViewController.swift</string>
 		<string>ViewController/BaseViewController.swift</string>
-		<string>View</string>
 		<string>../Podfile:swiftbasics</string>
 		<string>Scripts/R.swift.sh</string>
 	</array>
@@ -117,13 +115,7 @@
             <key>Group</key>
             <string>ViewController</string>
         </dict>
-		<key>View</key>
-		<dict>
-			<key>Group</key>
-			<array>
-				<string>View</string>
-			</array>
-		</dict>
+        
 		<key>CustomView/BaseView.swift</key>
 		<dict>
 			<key>Path</key>
@@ -194,13 +186,6 @@
 			<key>Group</key>
 			<array>
 				<string>CustomCell</string>
-			</array>
-		</dict>
-		<key>Category</key>
-		<dict>
-			<key>Group</key>
-			<array>
-				<string>Category</string>
 			</array>
 		</dict>
 		<key>AppDelegate.swift</key>
