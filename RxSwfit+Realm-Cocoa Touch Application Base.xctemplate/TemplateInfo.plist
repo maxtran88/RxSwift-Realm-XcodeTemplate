@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>io.vokal.dt.unit.cocoaTouchApplicationBase</string>
+	<string>io.rxswift+realm.dt.unit.cocoaTouchApplicationBase</string>
 	<key>Kind</key>
 	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
 	<key>Ancestors</key>

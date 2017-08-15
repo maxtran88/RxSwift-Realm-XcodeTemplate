@@ -24,30 +24,30 @@
 	<key>Concrete</key>
 	<true/>
 	<key>Identifier</key>
-	<string>io.vokal.xcodeTemplate-swift</string>
+	<string>io.rxswift+realm.xcodeTemplate-swift</string>
 	<key>Description</key>
-	<string>Swift starter project for Vokal iOS projects</string>
+	<string>Swift starter project for RxSwfit+Realm iOS projects</string>
 	<key>Ancestors</key>
 	<array>
-		<string>io.vokal.dt.unit.cocoaTouchApplicationBase</string>
+		<string>io.rxswift+realm.dt.unit.cocoaTouchApplicationBase</string>
 	</array>
 	<key>Components</key>
 	<array>
 		<dict>
 			<key>Identifier</key>
-			<string>io.vokal.dt.unit.iosUnitTestBundleBase-swift</string>
+			<string>io.rxswift+realm.dt.unit.iosUnitTestBundleBase-swift</string>
 			<key>Name</key>
 			<string>___PACKAGENAME___Tests</string>
 		</dict>
 		<dict>
 			<key>Identifier</key>
-			<string>io.vokal.dt.unit.kifUITestBundleBase-swift</string>
+			<string>io.rxswift+realm.dt.unit.kifUITestBundleBase-swift</string>
 			<key>Name</key>
 			<string>___PACKAGENAME___UITests</string>
 		</dict>
 		<dict>
 			<key>Identifier</key>
-			<string>io.vokal.dt.unit.aggregateScriptsTarget-swift</string>
+			<string>io.rxswift+realm.dt.unit.aggregateScriptsTarget-swift</string>
 			<key>Name</key>
 			<string>Code Generation Scripts</string>
 		</dict>
